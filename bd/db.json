@@ -3,26 +3,30 @@
        {
            "id" : 1,
             "title" : "Medio pepino, por favor",
+            "date" : "10/07/2021",
             "description" : "Joven acude a la ambulancia en un festival al peder mitad pepino dentro de su vagina.",
             "author" : "Jose O."
        },
        {
             "id" : 2,
             "title" : "Un martillo de calidad",
+            "date" : "22/12/2021",
             "description" : "Mujer mata a un hombre a martillazos, desde luego, un martillo muy recomendable por su resistencia.",
             "author" : "Joan B."
        },
        {
-        "id" : 3,
-        "title" : "¿Muerto o vivo?",
-        "description" : "Amigos sacan de su ataúd a su amigo fallecido para darle su ultima vuelta en moto por el barrio.",
-        "author" : "Borja E."
+            "id" : 3,
+            "title" : "¿Muerto o vivo?",
+            "date" : "25/11/2021",
+            "description" : "Amigos sacan de su ataúd a su amigo fallecido para darle su ultima vuelta en moto por el barrio.",
+            "author" : "Borja E."
        },
        {
-        "id" : 3,
-        "title" : "Mentoriza = Agoniza",
-        "description" : "El nuevo castigo de las empresas IT, mentorizar a un chaval que no tiene ni idea de como hacer un 'hello world' ",
-        "author" : "Jordi C."
+            "id" : 4,
+            "title" : "Mentoriza = Agoniza",
+            "date" : "14/12/2021",
+            "description" : "El nuevo castigo de las empresas IT, mentorizar a un chaval que no tiene ni idea de como hacer un 'hello world' ",
+            "author" : "Jordi C."
        }
    ]
   }
