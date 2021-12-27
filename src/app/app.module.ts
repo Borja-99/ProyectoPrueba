@@ -4,6 +4,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,8 @@ import { FilterPageComponent } from './components/filter-page/filter-page.compon
     FilterPageComponent
   ],
   imports: [
+    MatCardModule,
+    MatGridListModule,
     RouterModule,
     MatButtonModule,
     MatIconModule,
