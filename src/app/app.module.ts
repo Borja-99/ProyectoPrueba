@@ -9,12 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import { FilterPageComponent } from './components/filter-page/filter-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainPageComponent
+    MainPageComponent,
+    FilterPageComponent
   ],
   imports: [
     RouterModule,
