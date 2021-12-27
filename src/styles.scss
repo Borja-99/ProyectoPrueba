@@ -7,12 +7,13 @@ body {
   html, body {
     height: 100%;
   }
- .toolbar{
-  font-size:200%;
+ /*.toolbar{
+  font-size:200%;  //Do not use custom styles that affect internal layout of the component as padding, height, width or overflow
   background-color: cornflowerblue;
   color: black;
   height:100%;
  }
+ 
  .toolbarbutton{
    font-size:80%;
    text-align: center;
@@ -20,3 +21,4 @@ body {
    height: 30px;
    margin-left:15px;
  }
+ */
