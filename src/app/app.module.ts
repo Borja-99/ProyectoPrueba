@@ -1,24 +1,25 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatToolbar, MatToolbarModule } from '@angular/material/toolbar';
-import { MatToolbarHarness } from '@angular/material/toolbar/testing';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainPageComponent
   ],
   imports: [
     RouterModule,
     MatButtonModule,
-    MatToolbar,
-    MatToolbarHarness,
+    MatIconModule,
     MatToolbarModule,
     BrowserModule,
     AppRoutingModule
