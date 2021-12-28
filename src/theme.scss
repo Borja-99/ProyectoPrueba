@@ -33,21 +33,21 @@ $my-palette: (
     400: #9d9d9d,
     500: #7b7b7b,
     600: #555555,
-    700: #000000,
+    700: #434343,
     800: #262626,
-    900:  #434343,
+    900:  #000000,
   )
 );
 
 .my-custom-style {
-  background: mat.get-color-from-palette($my-palette, '500');
-  color: mat.get-color-from-palette($my-palette, '500-contrast');
+  background: mat.get-color-from-palette($my-palette, '900');
+  color: mat.get-color-from-palette($my-palette, '900-contrast');
  }
 
-$my-primary: mat.define-palette($my-palette, 700);
-$my-accent: mat.define-palette($my-palette, 200, 100, 400);
+$my-primary: mat.define-palette($my-palette, 800);
+$my-accent: mat.define-palette($my-palette, 700, 800, 900);
 
-$my-theme: mat.define-light-theme((
+$my-theme: mat.define-dark-theme((
  color: (
    primary: $my-primary,
    accent: $my-accent,
