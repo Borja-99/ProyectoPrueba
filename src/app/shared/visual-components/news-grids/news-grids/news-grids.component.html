@@ -1,0 +1,12 @@
+<ng-container *ngIf="noticias";>
+<p style="text-align-last: center;">NOTICIAS DEL MES</p>
+<p>
+    <mat-grid-list cols="2" rowHeight="2:2">
+        <mat-grid-tile>
+            <app-news-card>
+                [NoticiaS]='NoticiaS'
+            </app-news-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</p>
+</ng-container>

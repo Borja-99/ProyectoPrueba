@@ -12,13 +12,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { FilterPageComponent } from './components/filter-page/filter-page.component';
+import { NewsCardComponent } from './shared/visual-components/news-card/news-card/news-card.component';
+import { NewsGridsComponent } from './shared/visual-components/news-grids/news-grids/news-grids.component';
+import { NewsSectionComponent } from './shared/visual-components/news-section/news-section/news-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainPageComponent,
-    FilterPageComponent
+    FilterPageComponent,
+    NewsCardComponent,
+    NewsGridsComponent,
+    NewsSectionComponent,
   ],
   imports: [
     MatCardModule,
