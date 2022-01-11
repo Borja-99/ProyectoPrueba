@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Noticias } from 'src/app/shared/models/backendModels';
+import { Noticias, NOTICIERO } from 'src/app/shared/models/backendModels';
 
 @Component({
   selector: 'app-news-card',
@@ -8,9 +8,10 @@ import { Noticias } from 'src/app/shared/models/backendModels';
 })
 export class NewsCardComponent implements OnInit {
 
-  @Input() noticia: Noticias | undefined;
+  @Input() noticia: Noticias;
+  noticiero = NOTICIERO;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }

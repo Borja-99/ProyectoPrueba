@@ -15,6 +15,7 @@ import { FilterPageComponent } from './components/filter-page/filter-page.compon
 import { NewsCardComponent } from './shared/visual-components/news-card/news-card/news-card.component';
 import { NewsGridsComponent } from './shared/visual-components/news-grids/news-grids/news-grids.component';
 import { NewsSectionComponent } from './shared/visual-components/news-section/news-section/news-section.component';
+import { WhitePageComponent } from './components/white-page/white-page.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NewsSectionComponent } from './shared/visual-components/news-section/ne
     NewsCardComponent,
     NewsGridsComponent,
     NewsSectionComponent,
+    WhitePageComponent,
   ],
   imports: [
     MatCardModule,

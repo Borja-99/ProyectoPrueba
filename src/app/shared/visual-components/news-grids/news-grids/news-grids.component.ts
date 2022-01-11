@@ -7,13 +7,12 @@ import { Noticias } from "../../../models/backendModels";
   styleUrls: ['./news-grids.component.scss']
 })
 export class NewsGridsComponent implements OnInit {
-  @Input() noticias: Noticias[] = [];
+  @Input() noticias: Noticias[];
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
 
 

@@ -8,7 +8,8 @@ import { Noticias } from 'src/app/shared/models/backendModels';
 })
 export class NewsSectionComponent implements OnInit {
 
-  @Input() noticias: Noticias[] = [];
+  @Input() noticias: Noticias[];
+  
   constructor() { }
 
   ngOnInit(): void {
