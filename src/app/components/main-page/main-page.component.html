@@ -3,3 +3,8 @@
 
 <app-news-section>[noticias]="noticiasnews"</app-news-section>
  
+
+<ng-component *ngFor="let prueba of noticiasnews">
+    {{prueba.title}}
+    {{prueba.description}}
+</ng-component>

@@ -16,6 +16,7 @@ import { NewsCardComponent } from './shared/visual-components/news-card/news-car
 import { NewsGridsComponent } from './shared/visual-components/news-grids/news-grids/news-grids.component';
 import { NewsSectionComponent } from './shared/visual-components/news-section/news-section/news-section.component';
 import { WhitePageComponent } from './components/white-page/white-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { WhitePageComponent } from './components/white-page/white-page.component
     WhitePageComponent,
   ],
   imports: [
+    HttpClientModule,
     MatCardModule,
     MatGridListModule,
     RouterModule,

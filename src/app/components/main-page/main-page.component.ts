@@ -18,7 +18,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
  private subscriptions = new Subscription();
 
   constructor(
-    private NoticiasService: NoticiasService
+   private NoticiasService: NoticiasService
     ) {}
 
 
@@ -30,11 +30,12 @@ export class MainPageComponent implements OnInit, OnDestroy {
     this.subscriptions.unsubscribe();
   }
 
-   AllNews(): void {
+  AllNews(): void {
       this.subscriptions.add(
         this.NoticiasService.getAllNews().subscribe(
           (data) => {
             this.noticiasnews = data;
+            console.log(this.noticiasnews);
           },
           (err) => {
             console.log(err);
