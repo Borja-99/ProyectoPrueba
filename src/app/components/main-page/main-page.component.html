@@ -1,10 +1,30 @@
+<p style= "text-align-last: center; font-size: xx-large;" > NOTICIAS DEL MES </p>
 
-<p style="text-align-last: center;">NOTICIAS DEL MES</p>  
+<ng-container>
+    
+    <div >
+        <mat-grid-list cols="2" rowHeight = "2:1" >
+            <mat-grid-tile  *ngFor="let prueba of noticiasnews">
+                <ng-container *ngIf="prueba">
+                <mat-card class="mat-card-style"  [style.overflow]="'auto'" [style.height.px]="'260'">  
+                    <mat-card-header fxLayoutAlign = "center">
+                        <mat-card-title>
+                            {{prueba.title}}
+                        </mat-card-title>
+                    </mat-card-header> 
+                    <mat-card-date style="font-size: 20px;">
+                        {{prueba.author}} {{prueba.date}} 
+                    </mat-card-date>
+                    <mat-card-content >
+                    <p>
+                        {{prueba.description}}
+                    </p>
+                    <p></p>
+                </mat-card-content>
+                </mat-card>
+            </ng-container>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
 
-<app-news-section>[noticias]="noticiasnews"</app-news-section>
- 
-
-<ng-component *ngFor="let prueba of noticiasnews">
-    {{prueba.title}}
-    {{prueba.description}}
-</ng-component>
+</ng-container>
