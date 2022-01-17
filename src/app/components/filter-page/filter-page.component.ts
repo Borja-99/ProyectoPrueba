@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { from, Observable, Subscription } from 'rxjs';
 import { NoticiasService } from 'src/app/shared/services/noticias.service';
-import { Noticias} from '../../shared/models/backendModels'
-
+import { Noticias} from '../../shared/models/backendModels';
 @Component({
   selector: 'app-filter-page',
   templateUrl: './filter-page.component.html',
@@ -10,6 +9,8 @@ import { Noticias} from '../../shared/models/backendModels'
 })
 export class FilterPageComponent implements OnInit, OnDestroy {
 
+  tipos: string[] = ['Todas', 'Fiesta', 'Policia', 'Empresa', 'Politica'];
+  tip: string = "";
   noticiasnews: Noticias[] = [];
   noticiasnews2: Noticias[] = [];
   num: number;
@@ -34,7 +35,6 @@ export class FilterPageComponent implements OnInit, OnDestroy {
   }
 
   AllNews(): void {
-    this.ngOnDestroy;
     this.subscriptions.add(
       this.NoticiasService.getAllNews().subscribe(
         (data) => {
@@ -54,19 +54,22 @@ export class FilterPageComponent implements OnInit, OnDestroy {
     ); 
   }
 
-  onClick(): void{
-    if (this.click == 0 || this.click%2 == 0 ){
-      this.click ++;
-      return this.sortNewsClick();
-    }else {this.click ++;
-      return this.AllNews();
-    }
+  sortNewsFiesta(): void{
+    this.subscriptions.add(
+      this.NoticiasService.sortTypeFiesta().subscribe(
+        (data) => {
+          this.noticiasnews = data;
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+    )
   }
 
-  sortNewsClick(): void{
-    this.ngOnDestroy;
+  sortNewsPolicia(): void{
     this.subscriptions.add(
-      this.NoticiasService.sortAllNews().subscribe(
+      this.NoticiasService.sortTypePolicia().subscribe(
         (data) => {
           this.noticiasnews = data;
           this.num = data.length;
@@ -83,6 +86,62 @@ export class FilterPageComponent implements OnInit, OnDestroy {
       )
     )
   }
-  
 
+  sortNewsPolitica(): void{
+    this.subscriptions.add(
+      this.NoticiasService.sortTypePolitica().subscribe(
+        (data) => {
+          this.noticiasnews = data;
+          this.num = data.length;
+          for(let i=0; i<this.num; i++){
+            this.numero[i] = i;
+          }
+          console.log(this.noticiasnews);
+          console.log(this.num);
+          console.log(this.numero);
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+    )
+  }
+
+  sortNewsCompañia(): void{
+
+    this.subscriptions.add(
+      this.NoticiasService.sortTypeCompañia().subscribe(
+        (data) => {
+          this.noticiasnews = data;
+          this.num = data.length;
+          for(let i=0; i<this.num; i++){
+            this.numero[i] = i;
+          }
+          console.log(this.noticiasnews);
+          console.log(this.num);
+          console.log(this.numero);
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+    )
+  }
+
+  onClick(tipo): void{
+    this.tip = tipo;
+    switch(this.tip){
+      case 'Todas':
+        return this.AllNews();
+      case 'Fiesta':
+        return this.sortNewsFiesta();
+      case 'Policia':
+        return this.sortNewsPolicia();
+      case 'Politica': 
+       return this.sortNewsPolitica();
+      case 'Empresa': 
+        return this.sortNewsCompañia();
+    }
+  }
+  
 }

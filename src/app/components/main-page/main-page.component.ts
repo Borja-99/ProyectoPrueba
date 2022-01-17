@@ -12,47 +12,34 @@ import { Noticias} from '../../shared/models/backendModels'
 export class MainPageComponent implements OnInit, OnDestroy {
 
   noticiasnews: Noticias[] = [];
-  noticiasnews2: Noticias[] = [];
   num: number;
   numero: number[] = [];
-  nombres: string[] =[];
-  fecha: Date[] = [];
-  currentDate = new Date();
-  click: number = 0;
 
   private subscriptions = new Subscription();
  
   constructor(
    private NoticiasService: NoticiasService
-    ) {}
-
+  ) {}
 
   ngOnInit(): void {
-    this.monthNews();
+    this.AllNews();
   }
 
   ngOnDestroy(): void {
   }
 
-  monthNews(): void{
+  AllNews(): void{
     this.subscriptions.add(
-      this.NoticiasService.sortCurrentMonthNews().subscribe(
+      this.NoticiasService.getAllNews().subscribe(
         (data) => {
           this.noticiasnews = data;
           this.num = data.length;
           for(let i=0; i<this.num; i++){
             this.numero[i] = i;
-            //this.fecha[i] = this.noticiasnews[{'date'}];
-          }
-          for(let i = 0; i<this.fecha.length; i++) {
-            if(this.currentDate.getMonth() == 7){
-              // Si el mes de la noticia es el actual, entonces añadirlo a noticiasnews2, cogiendolo de noticiasnews por su id para mostrarlo por pantalla posteriormente
-            }
           }
           console.log(this.noticiasnews);
           console.log(this.num);
           console.log(this.numero);
-          console.log(this.noticiasnews2);
         },
         (err) => {
           console.log(err);
@@ -61,5 +48,4 @@ export class MainPageComponent implements OnInit, OnDestroy {
     )
   }
 
- 
 }

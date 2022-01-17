@@ -1,8 +1,11 @@
-<p style="text-align-last: center; font-size: xx-large;">TODAS LAS NOTICIAS</p>
+<p style="text-align-last: center; font-size: xx-large;">BUSCADOR DE NOTICIAS</p>
 <p>
-    <button class="hola" color="secondary" mat-raised-button aria-label="Icon button with a home icon" (click)="onClick()">
-        <mat-icon>sort</mat-icon>
-    </button>
+    <mat-form-field class = "form-field" appearance="fill">
+        <mat-label>Escoge una Opcion</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let tipo of tipos" [value]="tipo" (click)="onClick(tipo)">{{tipo}}</mat-option>
+        </mat-select>
+      </mat-form-field>
 </p>
 <ng-container>
     

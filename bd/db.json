@@ -5,36 +5,66 @@
             "title" : "Medio pepino, por favor",
             "date" : "10-07-2021",
             "description" : "Joven acude a la ambulancia en un festival al perder mitad pepino dentro de su vagina.",
-            "author" : "Jose O."
+            "author" : "Jose O.",
+            "type": "party"
        },
        {
-            "id" : 2,
+          "id" : 2,
+           "title" : "¿Muerto o vivo?",
+           "date" : "25-11-2021",
+           "description" : "Amigos sacan de su ataúd a su amigo fallecido para darle su ultima vuelta en moto por el barrio.",
+           "author" : "Borja E.",
+           "type": "party"
+       },
+       {
+          "id" : 3,
+           "title" : "¿Sostenible? o excusa para pagar menos",
+           "date" : "31-11-2021",
+           "description" : "Trabajadores se quejan de que se les descuente 50€ mensuales en concepto de 'sostenibilidad' de la empresa",
+           "author" : "Ana L.",
+           "type": "business"
+       },
+       {
+          "id" : 4,
+           "title" : "Mentoriza = Agoniza",
+           "date" : "14-12-2021",
+           "description" : "El nuevo castigo de las empresas IT, mentorizar a un chaval que no tiene ni idea de como hacer un 'hello world' ",
+           "author" : "Jordi C.",
+           "type": "business"
+       },
+       {
+          "id" : 5,
             "title" : "Un martillo de calidad",
             "date" : "22-12-2021",
             "description" : "Mujer mata a un hombre a martillazos, desde luego, un martillo muy recomendable por su resistencia.",
-            "author" : "Joan B."
+            "author" : "Joan B.",
+            "type": "police"
        },
        {
-            "id" : 3,
-            "title" : "¿Muerto o vivo?",
-            "date" : "25-11-2021",
-            "description" : "Amigos sacan de su ataúd a su amigo fallecido para darle su ultima vuelta en moto por el barrio.",
-            "author" : "Borja E."
+          "id" : 6,
+           "title" : "El móvil se responde RÁPIDO",
+           "date" : "05-01-2022",
+           "description" : "Maduro dice en su discurso anual que es importante contestar al tlfn. rápidamente y no dejar a la gente en visto.",
+           "author" : "Maria P.",
+           "type": "politics"
        },
        {
-            "id" : 4,
-            "title" : "Mentoriza = Agoniza",
-            "date" : "14-12-2021",
-            "description" : "El nuevo castigo de las empresas IT, mentorizar a un chaval que no tiene ni idea de como hacer un 'hello world' ",
-            "author" : "Jordi C."
-       },
-       {
-            "id" : 5,
+          "id" : 7,
             "title" : "La dura vida del político",
             "date" : "07-01-2022",
             "description" : "Con un patrimonio de mas de 5.000.000€ y un sueldo anual de mas de 100.000€ se queja de no llegar a fin de mes.",
-            "author" : "Ana L."
-       }
+            "author" : "Ana L.",
+            "type": "politics"
+       },
+       {
+          "id" : 8,
+           "title" : "Ali-G anda suelto ",
+           "date" : "14-01-2022",
+           "description" : "Hombre de mediana edad visto por ultima vez encadenado sin pantalones en la plaza central de Valencia, se ruega colaboracion.",
+           "author" : "Fran C.",
+           "type": "police"
+     }
+         
    ]
   }
   

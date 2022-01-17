@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule} from '@angular/flex-layout';
+import {MatSelectModule} from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,10 +28,12 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     HttpClientModule,
+    BrowserAnimationsModule,
     MatCardModule,
     MatGridListModule,
     RouterModule,
     MatButtonModule,
+    MatSelectModule,
     MatIconModule,
     MatToolbarModule,
     BrowserModule,
